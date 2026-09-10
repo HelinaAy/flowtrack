@@ -1,0 +1,33 @@
+:root {
+  --bg-gradient-start: #fdf2f8;
+  --bg-gradient-end: #f9f5ff;
+  --card-bg: #ffffff;
+  --text-primary: #2d2438;
+  --text-secondary: #8b8494;
+  --text-muted: #a99fb0;
+  --border-color: #ecdff0;
+  --input-bg: #fdfbfd;
+  --shadow-color: rgba(0, 0, 0, 0.04);
+  --accent-pink: #e88ba0;
+  --accent-purple: #c299e8;
+  --accent-text: #db7093;
+}
+
+[data-theme='dark'] {
+  --bg-gradient-start: #1e1a24;
+  --bg-gradient-end: #241f2e;
+  --card-bg: #2a2433;
+  --text-primary: #f0e8f2;
+  --text-secondary: #b8aec2;
+  --text-muted: #8f8496;
+  --border-color: #3d3448;
+  --input-bg: #241f2e;
+  --shadow-color: rgba(0, 0, 0, 0.2);
+  --accent-pink: #e88ba0;
+  --accent-purple: #c299e8;
+  --accent-text: #f0a8bc;
+}
+
+body {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}

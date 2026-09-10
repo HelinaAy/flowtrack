@@ -1,0 +1,103 @@
+.calendar-wrapper {
+  min-height: 100vh;
+  background: linear-gradient(135deg, var(--bg-gradient-start) 0%, var(--bg-gradient-end) 100%);
+  padding: 32px 24px 60px;
+}
+
+.calendar-header {
+  max-width: 900px;
+  margin: 0 auto 24px;
+}
+
+.calendar-title {
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+
+.calendar-subtext {
+  font-size: 14.5px;
+  color: var(--text-secondary);
+}
+
+.calendar-container {
+  max-width: 900px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 24px;
+}
+
+.calendar-card {
+  background: var(--card-bg);
+  border-radius: 20px;
+  padding: 24px;
+  box-shadow: 0 4px 18px var(--shadow-color);
+}
+
+.legend-card {
+  background: var(--card-bg);
+  border-radius: 20px;
+  padding: 24px;
+  box-shadow: 0 4px 18px var(--shadow-color);
+  height: fit-content;
+}
+
+.legend-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 16px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.legend-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* Override react-calendar defaults */
+.react-calendar {
+  width: 100%;
+  border: none;
+  font-family: inherit;
+  background: transparent;
+}
+
+.react-calendar__navigation button {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text-primary);
+  border-radius: 10px;
+}
+
+.react-calendar__navigation button:hover {
+  background: var(--bg-gradient-start);
+}
+
+.react-calendar__month-view__weekdays {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--text-muted);
+  text-decoration: none;
+}
+
+.react-calendar__month-view__weekdays abbr {
+  text-decoration: none;
+}
+
+.react-calendar__tile {
+  padding: 14px 6px;
+  border-radius: 12px;
+  font-size: 13.5px;}

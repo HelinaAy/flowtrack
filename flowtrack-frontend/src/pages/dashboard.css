@@ -1,0 +1,476 @@
+/* ==========================================================
+   FlowTrack — Clean, Unified Dashboard.css
+   ========================================================== */
+
+:root {
+  --primary: #d95f91;
+  --primary-hover: #c44c7e;
+  --primary-light: #fdf2f7;
+  --border: #f0e6ed;
+  --bg-main: #faf7f9;
+  --card-bg: #ffffff;
+  --text-title: #2d2438;
+  --text-body: #5c5564;
+  --text-sub: #8b8494;
+}
+
+[data-theme='dark'] {
+  --primary: #e88ba0;
+  --primary-hover: #f0a8bc;
+  --primary-light: #2a2433;
+  --border: #3d3448;
+  --bg-main: #1e1a24;
+  --card-bg: #2a2433;
+  --text-title: #f0e8f2;
+  --text-body: #d8cfe0;
+  --text-sub: #b8aec2;
+}
+
+.dashboard-wrapper {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 32px 24px 60px;
+  background: var(--bg-main);
+}
+
+.dashboard-header {
+  margin-bottom: 24px;
+}
+
+.dashboard-greeting {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--text-title);
+  margin-bottom: 4px;
+}
+
+.dashboard-subtext {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--text-sub);
+}
+
+/* Base Grid */
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 16px;
+}
+
+/* Universal Card Base */
+.phase-card,
+.stat-card,
+.chart-card,
+.log-cta-card,
+.hydration-card,
+.setup-prompt {
+  background: var(--card-bg);
+  border-radius: 16px;
+  padding: 22px;
+  border: 1px solid var(--border);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+}
+
+/* ==================== 1. Phase Card ==================== */
+.phase-card {
+  grid-column: span 12;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 28px 20px;
+}
+
+@media (min-width: 900px) {
+  .phase-card {
+    grid-column: span 5;
+    grid-row: span 2;
+  }
+}
+
+.phase-ring {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  background: var(--card-bg);
+  border: 5px solid var(--primary-light);
+  border-top-color: var(--primary);
+  border-right-color: var(--primary);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.day-num {
+  font-size: 34px;
+  font-weight: 600;
+  color: var(--text-title);
+  line-height: 1;
+}
+
+.day-label {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  color: var(--primary);
+  margin-top: 4px;
+}
+
+.phase-name {
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: capitalize;
+  color: var(--text-title);
+  margin-bottom: 4px;
+}
+
+.phase-desc {
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--text-sub);
+  max-width: 240px;
+  line-height: 1.4;
+}
+
+/* ==================== 2. Stat Cards ==================== */
+.stat-card {
+  grid-column: span 12;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+@media (min-width: 600px) and (max-width: 899px) {
+  .stat-card {
+    grid-column: span 6;
+  }
+}
+
+@media (min-width: 900px) {
+  .stat-card:nth-of-type(2) {
+    grid-column: span 4;
+  }
+  .stat-card:nth-of-type(3) {
+    grid-column: span 3;
+  }
+}
+
+.stat-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+
+.stat-label {
+  font-size: 12.5px;
+  font-weight: 500;
+  color: var(--text-sub);
+  margin-bottom: 4px;
+}
+
+.stat-value {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--text-title);
+}
+
+.stat-sub {
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--primary);
+  margin-top: 4px;
+}
+
+/* ==================== 3. Chart Card ==================== */
+.chart-card {
+  grid-column: span 12;
+}
+
+@media (min-width: 900px) {
+  .chart-card {
+    grid-column: span 7;
+  }
+}
+
+.card-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-title);
+  margin-bottom: 14px;
+}
+
+/* ==================== 4. Log CTA Card ==================== */
+.log-cta-card {
+  grid-column: span 12;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+@media (min-width: 900px) {
+  .log-cta-card {
+    grid-column: span 6;
+  }
+}
+
+.log-btn {
+  background: var(--primary);
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 18px;
+  font-weight: 500;
+  font-size: 13.5px;
+  cursor: pointer;
+  transition: background 0.15s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.log-btn:hover {
+  background: var(--primary-hover);
+}
+
+/* ==================== 5. Hydration Card ==================== */
+.hydration-card {
+  grid-column: span 12;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+@media (min-width: 900px) {
+  .hydration-card {
+    grid-column: span 6;
+  }
+}
+
+.hydration-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+
+.hydration-title-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.hydration-icon-wrapper {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: #e0f2fe;
+  color: #0284c7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hydration-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-title);
+  margin: 0;
+}
+
+.hydration-subtitle {
+  font-size: 11.5px;
+  font-weight: 400;
+  color: var(--text-sub);
+  margin-top: 1px;
+}
+
+.hydration-controls-btn-group {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.hydration-btn {
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--bg-main);
+  color: #0284c7;
+  font-size: 15px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.hydration-btn:hover {
+  background: #e0f2fe;
+  border-color: #bae6fd;
+}
+
+.hydration-btn-primary {
+  background: #0284c7;
+  color: #ffffff;
+  border-color: #0284c7;
+}
+
+.hydration-btn-primary:hover {
+  background: #0369a1;
+}
+
+/* 8 Cups in a clean horizontal row */
+.hydration-cups-grid {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 6px;
+}
+
+.hydration-cup-item {
+  height: 36px;
+  border-radius: 10px;
+  background: var(--primary-light);
+  border: 1px solid var(--border);
+  color: #93c5fd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.18s ease;
+}
+
+.hydration-cup-item:hover {
+  background: #e0f2fe;
+  border-color: #bae6fd;
+}
+
+.hydration-cup-item.filled {
+  background: #0284c7;
+  border-color: #0284c7;
+  color: #ffffff;
+  box-shadow: 0 2px 8px rgba(2, 132, 199, 0.28);
+  transform: scale(1.03);
+}
+
+/* ==================== 6. Quick Navigation Grid ==================== */
+.quick-nav-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+@media (min-width: 600px) {
+  .quick-nav-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 992px) {
+  .quick-nav-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.quick-nav-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 20px;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+  transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+              box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+              border-color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.quick-nav-card:hover {
+  transform: translateY(-3px);
+  border-color: #f8c9d9;
+  box-shadow: 0 8px 22px rgba(217, 95, 145, 0.09);
+}
+
+.quick-nav-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 14px;
+  transition: transform 0.2s ease;
+}
+
+.quick-nav-card:hover .quick-nav-icon {
+  transform: scale(1.08);
+}
+
+.icon-calendar {
+  background: #fdf2f7;
+  color: var(--primary);
+}
+
+.icon-log {
+  background: #fff1f2;
+  color: #e11d48;
+}
+
+.icon-insights {
+  background: #f5f3ff;
+  color: #7c3aed;
+}
+
+.icon-wellness {
+  background: #ecfdf5;
+  color: #059669;
+}
+
+.quick-nav-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-title);
+  margin: 0 0 4px 0;
+  transition: color 0.15s ease;
+}
+
+.quick-nav-card:hover .quick-nav-title {
+  color: var(--primary);
+}
+
+.quick-nav-desc {
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--text-sub);
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* ==================== 7. Setup Prompt ==================== */
+.setup-prompt {
+  max-width: 460px;
+  margin: 40px auto;
+  text-align: center;
+  padding: 32px 24px;
+}
+
+.setup-prompt h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text-title);
+  margin-bottom: 8px;
+}
+
+.setup-prompt .log-btn {
+  width: 100%;
+}

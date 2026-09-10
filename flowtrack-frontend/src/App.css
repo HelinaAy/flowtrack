@@ -1,0 +1,21 @@
+/* ==========================================================
+   FlowTrack — Warm Soft Pink Background Theme
+   ========================================================== */
+
+:root {
+  --bg-main: #fdf2f7;
+  --card-bg: #ffffff;
+  --border: #f0e6ed;
+}
+
+body {
+  background-color: #fdf2f7;
+  background-image: 
+    radial-gradient(at 0% 0%, rgba(254, 215, 232, 0.6) 0px, transparent 50%),
+    radial-gradient(at 100% 0%, rgba(245, 208, 254, 0.4) 0px, transparent 50%),
+    radial-gradient(at 100% 100%, rgba(254, 226, 237, 0.5) 0px, transparent 50%),
+    radial-gradient(at 0% 100%, rgba(253, 232, 240, 0.4) 0px, transparent 50%);
+  background-attachment: fixed;
+  min-height: 100vh;
+  margin: 0;
+}

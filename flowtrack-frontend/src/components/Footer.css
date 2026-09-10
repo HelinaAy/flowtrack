@@ -1,0 +1,137 @@
+/* ==========================================================
+   FlowTrack — Clean, Modern Footer
+   ========================================================== */
+
+:root {
+  --primary: #d95f91;
+  --border: #f0e6ed;
+  --card-bg: #ffffff;
+  --text-title: #2d2438;
+  --text-body: #5c5564;
+  --text-sub: #8b8494;
+}
+
+.modern-footer {
+  background: var(--card-bg);
+  border-top: 1px solid var(--border);
+  margin-top: auto;
+  width: 100%;
+}
+
+.footer-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 24px 28px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  margin-bottom: 32px;
+}
+
+@media (min-width: 768px) {
+  .footer-grid {
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 40px;
+  }
+}
+
+/* Brand & Mission */
+.footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: var(--text-title);
+  font-weight: 600;
+  font-size: 1.15rem;
+  margin-bottom: 10px;
+}
+
+.footer-brand-icon {
+  font-size: 1.1rem;
+}
+
+.footer-desc {
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--text-sub);
+  line-height: 1.6;
+  max-width: 360px;
+  margin-bottom: 14px;
+}
+
+.footer-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.footer-badge {
+  font-size: 11.5px;
+  font-weight: 500;
+  color: var(--text-body);
+  background: #faf7f9;
+  border: 1px solid var(--border);
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+
+/* Nav Columns */
+.footer-heading {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-title);
+  margin-bottom: 14px;
+}
+
+.footer-links-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-link {
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--text-sub);
+  transition: color 0.15s ease;
+}
+
+.footer-link:hover {
+  color: var(--primary);
+}
+
+.footer-text-item {
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--text-sub);
+}
+
+/* Bottom Copyright Bar */
+.footer-bottom {
+  padding-top: 20px;
+  border-top: 1px solid #f6eff4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  font-size: 12.5px;
+  font-weight: 400;
+  color: var(--text-sub);
+}
+
+@media (min-width: 600px) {
+  .footer-bottom {
+    flex-direction: row;
+  }
+}
