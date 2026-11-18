@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import Calendar from 'react-calendar';
 import api from '../services/api';
 import './CalendarPage.css';
-import './auth.css';
+import './Auth.css';
 import 'react-calendar/dist/Calendar.css';
 
 const symptomOptions = ['Cramps', 'Headache', 'Bloating', 'Fatigue', 'Acne', 'Backache'];
